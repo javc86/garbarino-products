@@ -23,6 +23,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "file-loader": "^3.0.1",
     "nodemon": "^1.19.1",
     "tar": "^4.4.8",
     "webpack": "^4.32.2",
@@ -42,12 +43,14 @@
     "node-fetch": "^2.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
     "redux-promise": "^0.6.0",
     "redux-router": "^2.1.2",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "request": "^2.88.0"
   }
 }

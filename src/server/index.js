@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import favicon from 'express-favicon';
 import dotenv from 'dotenv';
+import api from './routes';
 
 dotenv.config();
 
@@ -33,6 +34,8 @@ app.use((req, res, next) => {
     res.header("Content-Type", "application/json")
     next();
 });
+
+app.use('/api', api);
 
 app.listen((process.env.SERVER_PORT || 3000), () => {
     console.log('**************************************************');

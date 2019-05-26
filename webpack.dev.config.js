@@ -12,7 +12,17 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
             }
         ]
+    },
+    node: {
+        fs: "empty"
     }
 };

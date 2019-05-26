@@ -10,7 +10,7 @@ export const getProductsList = () => (
     async dispatch => {
         try {
             const response = await fetch(config.url + '/products');
-            const list = (await response.json()).rows;
+            const list = (await response.json()).items;
             return dispatch(onGetProductsList(list));
         } catch (error) {
             console.log(error);

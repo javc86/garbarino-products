@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-if (process.env.APP_ENV === 'dev') {
+if (process.env.APP_ENV === 'DEV') {
     const webpackConfDev = require('./webpack.dev.config');
     module.exports = webpackConfDev;
 } else {
