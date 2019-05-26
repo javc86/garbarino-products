@@ -1,0 +1,53 @@
+{
+  "name": "garbarino-products",
+  "version": "1.0.0",
+  "description": "Solución al examen de frontend blacklist",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server --ignore src/client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javc86/garbarino-products.git"
+  },
+  "author": "Johander Vazquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javc86/garbarino-products/issues"
+  },
+  "homepage": "https://github.com/javc86/garbarino-products#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^1.19.1",
+    "tar": "^4.4.8",
+    "webpack": "^4.32.2",
+    "webpack-dev-middleware": "^3.7.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@material-ui/core": "^4.0.0",
+    "@material-ui/icons": "^4.0.0",
+    "body-parser": "^1.19.0",
+    "connected-react-router": "^6.4.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "history": "^4.9.0",
+    "mysql": "^2.17.1",
+    "node-fetch": "^2.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-promise": "^0.6.0",
+    "redux-router": "^2.1.2",
+    "redux-thunk": "^2.3.0"
+  }
+}
