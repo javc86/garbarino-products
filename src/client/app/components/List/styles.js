@@ -16,6 +16,12 @@ const styles = makeStyles({
     },
     cardContainer: {
         height: 170
+    },
+    root: {
+        flexGrow: 1
+    },
+    paper: {
+        textAlign: 'center'
     }
 });
 

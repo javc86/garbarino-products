@@ -7,6 +7,7 @@ import {Helmet} from 'react-helmet';
 import Header from './components/Header';
 import Products from './screens/Products';
 import ProductDetails from './screens/Products/Details';
+import NotFound from './screens/NotFound';
 
 class App extends Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class App extends Component {
                     <Route exact path="/" component={Products}/>
                     <Route path="/products" component={Products}/>
                     <Route path="/details/:id" component={ProductDetails}/>
+                    <Route path="/notfound" component={NotFound}/>
                 </Switch>
             </div>
         );

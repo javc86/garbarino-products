@@ -29,9 +29,16 @@ class Details extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        const {details} = this.props;
+        const {details, history} = this.props;
         const {info} = this.state;
-        if (info === null) this.setState({info: details});
+    
+        if (info === null) {
+            if (!details.enabled) {
+                history.push('/notfound');
+            } else {
+                this.setState({info: details});
+            }
+        }
     }
 
     render() {

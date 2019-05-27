@@ -21,4 +21,24 @@ api.get('/products/:id', async (req, res) => {
     }
 });
 
+api.patch('/products/:id', async (req, res) => {
+    try {
+        let save = true;
+        console.log(req.params);
+        console.log(req.body);
+
+        if(req.body.enabled === undefined) {
+            res.send({error: 'Debe asignar el atributo \'enabled\' con true o false'});
+            save = false;
+        }
+
+        if (save) {
+            const response = await productsActions.save(req.params.id, req.body.enabled);
+            res.send(JSON.parse(response));
+        }
+    } catch (error) {
+        res.send({error: error});
+    }
+});
+
 export default api;
