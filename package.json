@@ -4,7 +4,7 @@
   "description": "Solución al examen de frontend blacklist",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server --ignore src/client"
+    "start": "nodemon --exec babel-node src/server --ignore src/client"
   },
   "repository": {
     "type": "git",

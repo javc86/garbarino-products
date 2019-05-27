@@ -26,6 +26,11 @@ module.exports = {
             }
         ]
     },
+    performance: {
+        hints: 'warning',
+        maxEntrypointSize: 1000000,
+        maxAssetSize: 1000000
+    },
     node: {
         fs: "empty"
     }
