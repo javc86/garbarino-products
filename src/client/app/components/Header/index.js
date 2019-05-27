@@ -23,7 +23,7 @@ const Header = () => {
             <AppBar position="static" className={classes.container} color="primary">
                 <Toolbar>
                     <div className={classes.image} onClick={e => {}}>
-                        <img src={logo}/>
+                        <img src={`/${logo}`}/>
                     </div>
                 </Toolbar>
             </AppBar>

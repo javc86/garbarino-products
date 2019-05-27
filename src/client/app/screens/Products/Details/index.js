@@ -37,7 +37,7 @@ class Details extends Component {
     render() {
         const {history, classes} = this.props;
         const {info} = this.state;
-        console.log(info);
+
         return(
             <div>
                 <Breadcrumb

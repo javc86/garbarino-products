@@ -34,25 +34,3 @@ export const getProductDetails = id => (
         }
     }
 );
-
-const onGetUpdatedBlacklist = updatedBlacklist => ({
-    type: 'GET_UPDATED_BLACKLIST',
-    payload: {updatedBlacklist}
-});
-
-export const getSavedAccount = (body, callback) => (
-    async dispatch => {
-        try {
-            const response = await fetch(config.url + '/blacklist', {
-                method: 'POST',
-                body: JSON.stringify(body),
-                headers: {'Content-Type': 'application/json'}
-            });
-            const updatedBlacklist = (await response.json());
-            callback(updatedBlacklist);
-            return dispatch(onGetUpdatedBlacklist(updatedBlacklist));
-        } catch (error) {
-            console.log(error);
-        }
-    }
-);

@@ -22,10 +22,19 @@ app.use(express.static(path.resolve(
     __dirname,
     process.env.APP_ENV.toUpperCase() === 'DEV' ? '../../public' : '../public'
 )));
+
 app.use(favicon(path.resolve(
     __dirname,
     process.env.APP_ENV.toUpperCase() === 'DEV' ? '../../public/assets/favicon.ico' : '../public/assets/favicon.ico'
 )));
+
+app.get('/products', (req, res) => {
+    res.sendFile(path.join(__dirname, process.env.APP_ENV.toUpperCase() === 'DEV' ? '../../public/index.html' : '../public/index.html'));
+});
+
+app.get('/details/*', (req, res) => {
+    res.sendFile(path.join(__dirname, process.env.APP_ENV.toUpperCase() === 'DEV' ? '../../public/index.html' : '../public/index.html'));
+});
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
