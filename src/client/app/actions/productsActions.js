@@ -27,7 +27,7 @@ export const getProductDetails = id => (
     async dispatch => {
         try {
             const response = await fetch(config.url + '/products/' + id);
-            const details = (await response.json()).result;
+            const details = (await response.json());
             return dispatch(onGetProductDetails(details));
         } catch (error) {
             console.log(error);

@@ -6,7 +6,7 @@ import {Helmet} from 'react-helmet';
 
 import Header from './components/Header';
 import Products from './screens/Products';
-import ProductsClient from './screens/Products/Details';
+import ProductDetails from './screens/Products/Details';
 
 class App extends Component {
     constructor(props) {
@@ -15,15 +15,15 @@ class App extends Component {
 
     render() {
         return (
-            <div style={{paddingTop: 120}}>
+            <div>
                 <Helmet>
-                    <style>{'body { background-color: #f6f6f6; }'}</style>
+                    <style>{'body {background-color: #f6f6f6;}'}</style>
                 </Helmet>
                 <Header/>
                 <Switch>
                     <Route exact path="/" component={Products}/>
                     <Route path="/products" component={Products}/>
-                    <Route path="/products/details/:id" component={ProductsClient}/>
+                    <Route path="/details/:id" component={ProductDetails}/>
                 </Switch>
             </div>
         );

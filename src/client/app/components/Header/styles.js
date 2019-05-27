@@ -1,10 +1,9 @@
-
 import {makeStyles} from '@material-ui/styles';
 
 const styles = makeStyles({
     container: {
         height: 100,
-
+        marginBottom: 20
     },
     image: {
         overflow: 'hidden',

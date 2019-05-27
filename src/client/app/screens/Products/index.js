@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import styles from './styles';
 import * as actions from '../../actions/productsActions';
 import List from '../../components/List';
 
@@ -14,8 +13,8 @@ class Products extends Component {
     }
 
     render() {
-        const {list} = this.props
-        return(<List list={list}/>);
+        const {list, history} = this.props;
+        return(<List list={list} history={history}/>);
     }
 }
 

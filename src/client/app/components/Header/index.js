@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar position="static" className={classes.container} color="primary" position="fixed">
+            <AppBar position="static" className={classes.container} color="primary">
                 <Toolbar>
                     <div className={classes.image} onClick={e => {}}>
                         <img src={logo}/>

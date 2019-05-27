@@ -8,17 +8,18 @@ import Typography from '@material-ui/core/Typography';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import red from '@material-ui/core/colors/red';
+import {Link} from "react-router-dom";
 
 import styles from './styles';
 import logo from '../../../../../public/assets/logo-garbarino.svg';
 
-const List = ({list}) => {
+const List = ({list, history}) => {
     const classes = styles();
 
     return (
         <div className={classes.containerList}>
         {list.map(item => (
-            <Card key={item.id} className={classes.card}>
+            <Card key={item.id} className={classes.card} onClick={() => history.push('/details/' + item.id)}>
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
@@ -47,7 +48,8 @@ const List = ({list}) => {
 }
 
 List.propTypes = {
-    list: PropTypes.array.isRequired
+    list: PropTypes.array.isRequired,
+    history: PropTypes.object.isRequired
 };
 
 export default List;

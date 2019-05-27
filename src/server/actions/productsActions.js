@@ -30,7 +30,6 @@ productsActions.details = id => (
         };
 
         http.get(options, function (error, response, data) {
-            console.log(data);
             var details = JSON.parse(data);
             resolve(JSON.stringify(details));
         });
